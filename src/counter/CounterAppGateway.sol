@@ -80,7 +80,7 @@ contract CounterAppGateway is AppGatewayBase, Ownable {
      * @dev Allows the owner to modify fee settings for multi-chain operations
      * @param fees_ New fee configuration
      */
-    function setMaxFees(uint256 fees_) public {
+    function setMaxFees(uint256 fees_) public onlyOwner {
         maxFees = fees_;
     }
 }
